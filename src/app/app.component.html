@@ -1,3 +1,27 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<!-- **************************menu********************** -->
+<ion-menu side="start" menuId="first" contentId="main">
+  <app-sidemenu></app-sidemenu>
+</ion-menu>
+
+<!-- ======================main===================== -->
+<ion-app id="main">
+
+  <ion-header>
+    <ion-toolbar>
+      <!-- ********************menu button*********************** -->
+
+      <ion-buttons slot="start">
+        <ion-menu-button color="light" ></ion-menu-button>
+      </ion-buttons>
+      <!-- ********************title*********************** -->
+      <ion-title>Nav</ion-title>
+      <!-- ******************************** -->
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <!-- *******************************router outlet************************** -->
+    <ion-router-outlet></ion-router-outlet>
+    <!-- ******************************** -->
+  </ion-content>
 </ion-app>

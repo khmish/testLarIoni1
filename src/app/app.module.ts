@@ -6,12 +6,15 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthGuardService } from 'src/app/guards/auth-guard.service';
-
+import {SidemenuComponent} from 'src/app/sidemenu/sidemenu.component'
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    SidemenuComponent
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
