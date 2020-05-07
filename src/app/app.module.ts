@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AuthGuardService } from 'src/app/guards/auth-guard.service';
 import { FirebaseServiceService } from "src/app/service/firebase-service.service";
+import { FirebaseUserService } from "src/app/service/firebase-user.service";
 
 import {SidemenuComponent} from 'src/app/sidemenu/sidemenu.component'
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 // import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 // import { FCM } from '@ionic-native/fcm/ngx';
 import { FCM } from '@ionic-native/fcm/ngx';
+
 
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
@@ -41,6 +43,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     SplashScreen,
     AuthGuardService,
     FirebaseServiceService, 
+    FirebaseUserService,
     FCM,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

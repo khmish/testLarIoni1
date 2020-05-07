@@ -14,7 +14,8 @@ import {
 import {
   FCM
 } from '@ionic-native/fcm/ngx';
-import { FirebaseServiceService } from './service/firebase-service.service';
+// import { FirebaseServiceService } from './service/firebase-service.service';
+import { FirebaseUserService , User } from "src/app/service/firebase-user.service";
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private fcm: FCM,
-    private fire:FirebaseServiceService
+     private userService:FirebaseUserService
   ) {
     this.initializeApp();
   }
@@ -37,13 +38,16 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-      this.fcm.subscribeToTopic('marketing');
+      // this.fcm.subscribeToTopic('marketing');
 
-      this.fcm.getToken().then(token => {
-        console.log('token');
-        
-        this.fire.updateTodo({createdAt:new Date().getTime(),priority:2,token:token,task:""},'0v6MHj6dwzf2pqTkfOMP')
-      });
+      // this.fcm.getToken().then(token => {
+      //   console.log('token');
+      //   let userModel:User={
+      //     email:'hk0021@gmail.com',
+      //     token:''
+      //   };
+      //   this.userService.addUser(userModel);
+      // });
 
       // this.fcm.onNotification().subscribe(data => {
       //   if (data.wasTapped) {
