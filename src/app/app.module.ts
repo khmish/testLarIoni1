@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 // import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 // import { FCM } from '@ionic-native/fcm/ngx';
+import { FCM } from '@ionic-native/fcm/ngx';
 
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
@@ -40,7 +41,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     SplashScreen,
     AuthGuardService,
     FirebaseServiceService, 
-    // FCM,
+    FCM,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

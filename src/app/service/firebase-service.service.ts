@@ -8,6 +8,7 @@ export interface Todo {
   task: string;
   priority: number;
   createdAt: number;
+  token?: string;
 }
 @Injectable({
   providedIn: 'root'
