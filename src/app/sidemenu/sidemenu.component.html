@@ -1,3 +1,4 @@
+<ion-menu side="start" menuId="first" contentId="main">
 <ion-header>
   <ion-toolbar >
     <ion-title>Menu</ion-title>
@@ -5,9 +6,9 @@
 </ion-header>
 <ion-content>
   <ion-list>
-    <ion-item >Login</ion-item>
-    <ion-item>Regiser</ion-item>
-    <ion-item>Contact Us</ion-item>
+    <ion-item *ngFor="let item of menuList" routerLink='{{item.url}}'  >{{item.name}}</ion-item>
+    
     
   </ion-list>
 </ion-content>
+</ion-menu>

@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidemenuComponent implements OnInit {
 
+  menuList =[
+    {name:'Contact Us', url:''},
+    {name:'Login', url:''},
+    {name:'Register', url:''},
+    {name:'TestPage', url:'test-page'},
+  ];
   constructor() { }
 
   ngOnInit() {}
